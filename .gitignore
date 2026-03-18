@@ -1,3 +1,13 @@
 node_modules
 data
 .env
+.npm-cache
+build/
+dist/
+*.log
+.DS_Store
+android/app/build
+android/.gradle
+android/.idea
+android/local.properties
+app-release.apk
