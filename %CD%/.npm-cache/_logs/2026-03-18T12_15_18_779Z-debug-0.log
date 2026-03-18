@@ -1,0 +1,438 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\hs180\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.1
+2 info using node@v24.14.0
+3 silly config load:file:C:\Users\hs180\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\hs180\OneDrive\Desktop\Storage\.npmrc
+5 silly config load:file:C:\Users\hs180\.npmrc
+6 silly config load:file:C:\Users\hs180\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\hs180\OneDrive\Desktop\Storage\%CD%\.npm-cache\_logs\2026-03-18T12_15_18_779Z-
+10 verbose logfile C:\Users\hs180\OneDrive\Desktop\Storage\%CD%\.npm-cache\_logs\2026-03-18T12_15_18_779Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules/@aws-sdk/s3-request-presigner
+16 silly reify moves {}
+17 silly audit bulk request {
+17 silly audit   '@aws-crypto/crc32': [ '5.2.0' ],
+17 silly audit   '@aws-crypto/crc32c': [ '5.2.0' ],
+17 silly audit   '@aws-crypto/sha1-browser': [ '5.2.0' ],
+17 silly audit   '@smithy/is-array-buffer': [ '2.2.0', '4.2.2' ],
+17 silly audit   '@smithy/util-buffer-from': [ '2.2.0', '4.2.2' ],
+17 silly audit   '@smithy/util-utf8': [ '2.3.0', '4.2.2' ],
+17 silly audit   '@aws-crypto/sha256-browser': [ '5.2.0' ],
+17 silly audit   '@aws-crypto/sha256-js': [ '5.2.0' ],
+17 silly audit   '@aws-crypto/supports-web-crypto': [ '5.2.0' ],
+17 silly audit   '@aws-crypto/util': [ '5.2.0' ],
+17 silly audit   '@aws-sdk/client-s3': [ '3.1010.0' ],
+17 silly audit   '@aws-sdk/core': [ '3.973.20' ],
+17 silly audit   '@aws-sdk/crc64-nvme': [ '3.972.5' ],
+17 silly audit   '@aws-sdk/credential-provider-env': [ '3.972.18' ],
+17 silly audit   '@aws-sdk/credential-provider-http': [ '3.972.20' ],
+17 silly audit   '@aws-sdk/credential-provider-ini': [ '3.972.20' ],
+17 silly audit   '@aws-sdk/credential-provider-login': [ '3.972.20' ],
+17 silly audit   '@aws-sdk/credential-provider-node': [ '3.972.21' ],
+17 silly audit   '@aws-sdk/credential-provider-process': [ '3.972.18' ],
+17 silly audit   '@aws-sdk/credential-provider-sso': [ '3.972.20' ],
+17 silly audit   '@aws-sdk/credential-provider-web-identity': [ '3.972.20' ],
+17 silly audit   '@aws-sdk/middleware-bucket-endpoint': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/middleware-expect-continue': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/middleware-flexible-checksums': [ '3.974.0' ],
+17 silly audit   '@aws-sdk/middleware-host-header': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/middleware-location-constraint': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/middleware-logger': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/middleware-recursion-detection': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/middleware-sdk-s3': [ '3.972.20' ],
+17 silly audit   '@aws-sdk/middleware-ssec': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/middleware-user-agent': [ '3.972.21' ],
+17 silly audit   '@aws-sdk/nested-clients': [ '3.996.10' ],
+17 silly audit   '@aws-sdk/region-config-resolver': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/s3-request-presigner': [ '3.1011.0' ],
+17 silly audit   '@aws-sdk/signature-v4-multi-region': [ '3.996.8' ],
+17 silly audit   '@aws-sdk/token-providers': [ '3.1009.0' ],
+17 silly audit   '@aws-sdk/types': [ '3.973.6' ],
+17 silly audit   '@aws-sdk/util-arn-parser': [ '3.972.3' ],
+17 silly audit   '@aws-sdk/util-endpoints': [ '3.996.5' ],
+17 silly audit   '@aws-sdk/util-format-url': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/util-locate-window': [ '3.965.5' ],
+17 silly audit   '@aws-sdk/util-user-agent-browser': [ '3.972.8' ],
+17 silly audit   '@aws-sdk/util-user-agent-node': [ '3.973.7' ],
+17 silly audit   '@aws-sdk/xml-builder': [ '3.972.11' ],
+17 silly audit   '@aws/lambda-invoke-store': [ '0.2.4' ],
+17 silly audit   '@capacitor/android': [ '8.2.0' ],
+17 silly audit   '@capacitor/cli': [ '8.2.0' ],
+17 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+17 silly audit   'brace-expansion': [ '5.0.4', '2.0.2', '1.1.12' ],
+17 silly audit   debug: [ '4.4.3', '2.6.9' ],
+17 silly audit   glob: [ '13.0.6', '10.5.0', '7.2.3' ],
+17 silly audit   'lru-cache': [ '11.2.7', '10.4.3' ],
+17 silly audit   minimatch: [ '10.2.4', '9.0.9', '5.1.9', '3.1.5' ],
+17 silly audit   ms: [ '2.1.3', '2.0.0' ],
+17 silly audit   'path-scurry': [ '2.0.2', '1.11.1' ],
+17 silly audit   rimraf: [ '6.1.3', '2.7.1' ],
+17 silly audit   '@capacitor/core': [ '8.2.0' ],
+17 silly audit   '@ionic/cli-framework-output': [ '2.2.8' ],
+17 silly audit   '@ionic/utils-array': [ '2.1.6' ],
+17 silly audit   '@ionic/utils-fs': [ '3.1.7' ],
+17 silly audit   'fs-extra': [ '9.1.0', '11.3.4' ],
+17 silly audit   '@ionic/utils-object': [ '2.1.6' ],
+17 silly audit   '@ionic/utils-process': [ '2.1.12' ],
+17 silly audit   'signal-exit': [ '3.0.7', '4.1.0' ],
+17 silly audit   '@ionic/utils-stream': [ '3.1.7' ],
+17 silly audit   '@ionic/utils-subprocess': [ '3.0.1' ],
+17 silly audit   '@ionic/utils-terminal': [ '2.3.5' ],
+17 silly audit   'ansi-regex': [ '5.0.1', '6.2.2' ],
+17 silly audit   'ansi-styles': [ '4.3.0', '6.2.3' ],
+17 silly audit   'emoji-regex': [ '8.0.0', '9.2.2' ],
+17 silly audit   'string-width': [ '4.2.3', '5.1.2' ],
+17 silly audit   'strip-ansi': [ '6.0.1', '7.2.0' ],
+17 silly audit   'wrap-ansi': [ '7.0.0', '8.1.0' ],
+17 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+17 silly audit   '@isaacs/fs-minipass': [ '4.0.1' ],
+17 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+17 silly audit   '@smithy/abort-controller': [ '4.2.12' ],
+17 silly audit   '@smithy/chunked-blob-reader': [ '5.2.2' ],
+17 silly audit   '@smithy/chunked-blob-reader-native': [ '4.2.3' ],
+17 silly audit   '@smithy/config-resolver': [ '4.4.11' ],
+17 silly audit   '@smithy/core': [ '3.23.12' ],
+17 silly audit   '@smithy/credential-provider-imds': [ '4.2.12' ],
+17 silly audit   '@smithy/eventstream-codec': [ '4.2.12' ],
+17 silly audit   '@smithy/eventstream-serde-browser': [ '4.2.12' ],
+17 silly audit   '@smithy/eventstream-serde-config-resolver': [ '4.3.12' ],
+17 silly audit   '@smithy/eventstream-serde-node': [ '4.2.12' ],
+17 silly audit   '@smithy/eventstream-serde-universal': [ '4.2.12' ],
+17 silly audit   '@smithy/fetch-http-handler': [ '5.3.15' ],
+17 silly audit   '@smithy/hash-blob-browser': [ '4.2.13' ],
+17 silly audit   '@smithy/hash-node': [ '4.2.12' ],
+17 silly audit   '@smithy/hash-stream-node': [ '4.2.12' ],
+17 silly audit   '@smithy/invalid-dependency': [ '4.2.12' ],
+17 silly audit   '@smithy/md5-js': [ '4.2.12' ],
+17 silly audit   '@smithy/middleware-content-length': [ '4.2.12' ],
+17 silly audit   '@smithy/middleware-endpoint': [ '4.4.26' ],
+17 silly audit   '@smithy/middleware-retry': [ '4.4.43' ],
+17 silly audit   '@smithy/middleware-serde': [ '4.2.15' ],
+17 silly audit   '@smithy/middleware-stack': [ '4.2.12' ],
+17 silly audit   '@smithy/node-config-provider': [ '4.3.12' ],
+17 silly audit   '@smithy/node-http-handler': [ '4.5.0' ],
+17 silly audit   '@smithy/property-provider': [ '4.2.12' ],
+17 silly audit   '@smithy/protocol-http': [ '5.3.12' ],
+17 silly audit   '@smithy/querystring-builder': [ '4.2.12' ],
+17 silly audit   '@smithy/querystring-parser': [ '4.2.12' ],
+17 silly audit   '@smithy/service-error-classification': [ '4.2.12' ],
+17 silly audit   '@smithy/shared-ini-file-loader': [ '4.4.7' ],
+17 silly audit   '@smithy/signature-v4': [ '5.3.12' ],
+17 silly audit   '@smithy/smithy-client': [ '4.12.6' ],
+17 silly audit   '@smithy/types': [ '4.13.1' ],
+17 silly audit   '@smithy/url-parser': [ '4.2.12' ],
+17 silly audit   '@smithy/util-base64': [ '4.3.2' ],
+17 silly audit   '@smithy/util-body-length-browser': [ '4.2.2' ],
+17 silly audit   '@smithy/util-body-length-node': [ '4.2.3' ],
+17 silly audit   '@smithy/util-config-provider': [ '4.2.2' ],
+17 silly audit   '@smithy/util-defaults-mode-browser': [ '4.3.42' ],
+17 silly audit   '@smithy/util-defaults-mode-node': [ '4.2.45' ],
+17 silly audit   '@smithy/util-endpoints': [ '3.3.3' ],
+17 silly audit   '@smithy/util-hex-encoding': [ '4.2.2' ],
+17 silly audit   '@smithy/util-middleware': [ '4.2.12' ],
+17 silly audit   '@smithy/util-retry': [ '4.2.12' ],
+17 silly audit   '@smithy/util-stream': [ '4.5.20' ],
+17 silly audit   '@smithy/util-uri-escape': [ '4.2.2' ],
+17 silly audit   '@smithy/util-waiter': [ '4.2.13' ],
+17 silly audit   '@smithy/uuid': [ '1.1.2' ],
+17 silly audit   '@types/fs-extra': [ '8.1.5' ],
+17 silly audit   '@types/node': [ '25.5.0' ],
+17 silly audit   '@types/slice-ansi': [ '4.0.0' ],
+17 silly audit   '@xmldom/xmldom': [ '0.8.11' ],
+17 silly audit   'abort-controller': [ '3.0.0' ],
+17 silly audit   accepts: [ '1.3.8' ],
+17 silly audit   'append-field': [ '1.0.0' ],
+17 silly audit   archiver: [ '7.0.1' ],
+17 silly audit   'archiver-utils': [ '5.0.2' ],
+17 silly audit   'readable-stream': [ '4.7.0', '2.3.8', '3.6.2' ],
+17 silly audit   string_decoder: [ '1.3.0', '1.1.1' ],
+17 silly audit   'array-flatten': [ '1.1.1' ],
+17 silly audit   'astral-regex': [ '2.0.0' ],
+17 silly audit   async: [ '3.2.6' ],
+17 silly audit   asynckit: [ '0.4.0' ],
+17 silly audit   'at-least-node': [ '1.0.0' ],
+17 silly audit   b4a: [ '1.8.0' ],
+17 silly audit   'bare-events': [ '2.8.2' ],
+17 silly audit   'bare-fs': [ '4.5.5' ],
+17 silly audit   'bare-os': [ '3.8.0' ],
+17 silly audit   'bare-path': [ '3.0.0' ],
+17 silly audit   'bare-stream': [ '2.8.1' ],
+17 silly audit   'bare-url': [ '2.3.2' ],
+17 silly audit   'base64-js': [ '1.5.1' ],
+17 silly audit   base64url: [ '3.0.1' ],
+17 silly audit   bcryptjs: [ '2.4.3' ],
+17 silly audit   'big-integer': [ '1.6.52' ],
+17 silly audit   binary: [ '0.3.0' ],
+17 silly audit   bluebird: [ '3.4.7' ],
+17 silly audit   'body-parser': [ '1.20.4' ],
+17 silly audit   bowser: [ '2.14.1' ],
+17 silly audit   'bplist-parser': [ '0.3.2' ],
+17 silly audit   buffer: [ '6.0.3' ],
+17 silly audit   'buffer-crc32': [ '1.0.0', '0.2.13' ],
+17 silly audit   'buffer-from': [ '1.1.2' ],
+17 silly audit   'buffer-indexof-polyfill': [ '1.0.2' ],
+17 silly audit   buffers: [ '0.1.1' ],
+17 silly audit   busboy: [ '1.6.0' ],
+17 silly audit   bytes: [ '3.1.2' ],
+17 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+17 silly audit   'call-bound': [ '1.0.4' ],
+17 silly audit   chainsaw: [ '0.1.0' ],
+17 silly audit   chownr: [ '3.0.0' ],
+17 silly audit   'color-convert': [ '2.0.1' ],
+17 silly audit   'color-name': [ '1.1.4' ],
+17 silly audit   'combined-stream': [ '1.0.8' ],
+17 silly audit   commander: [ '12.1.0' ],
+17 silly audit   'compress-commons': [ '6.0.2' ],
+17 silly audit   'concat-map': [ '0.0.1' ],
+17 silly audit   'concat-stream': [ '1.6.2' ],
+17 silly audit   'content-disposition': [ '0.5.4' ],
+17 silly audit   'content-type': [ '1.0.5' ],
+17 silly audit   cookie: [ '0.7.2' ],
+17 silly audit   'cookie-signature': [ '1.0.7' ],
+17 silly audit   'core-util-is': [ '1.0.3' ],
+17 silly audit   'crc-32': [ '1.2.2' ],
+17 silly audit   'crc32-stream': [ '6.0.0' ],
+17 silly audit   'cross-spawn': [ '7.0.6' ],
+17 silly audit   'define-lazy-prop': [ '2.0.0' ],
+17 silly audit   'delayed-stream': [ '1.0.0' ],
+17 silly audit   depd: [ '2.0.0' ],
+17 silly audit   destroy: [ '1.2.0' ],
+17 silly audit   dotenv: [ '16.6.1' ],
+17 silly audit   'dunder-proto': [ '1.0.1' ],
+17 silly audit   duplexer2: [ '0.1.4' ],
+17 silly audit   eastasianwidth: [ '0.2.0' ],
+17 silly audit   'ee-first': [ '1.1.1' ],
+17 silly audit   elementtree: [ '0.1.7' ],
+17 silly audit   encodeurl: [ '2.0.0' ],
+17 silly audit   'env-paths': [ '2.2.1' ],
+17 silly audit   'es-define-property': [ '1.0.1' ],
+17 silly audit   'es-errors': [ '1.3.0' ],
+17 silly audit   'es-object-atoms': [ '1.1.1' ],
+17 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+17 silly audit   'escape-html': [ '1.0.3' ],
+17 silly audit   etag: [ '1.8.1' ],
+17 silly audit   'event-target-shim': [ '5.0.1' ],
+17 silly audit   events: [ '3.3.0' ],
+17 silly audit   'events-universal': [ '1.0.1' ],
+17 silly audit   express: [ '4.22.1' ],
+17 silly audit   'express-session': [ '1.19.0' ],
+17 silly audit   'fast-fifo': [ '1.3.2' ],
+17 silly audit   'fast-xml-builder': [ '1.1.4' ],
+17 silly audit   'fast-xml-parser': [ '5.4.1' ],
+17 silly audit   'fd-slicer': [ '1.1.0' ],
+17 silly audit   finalhandler: [ '1.3.2' ],
+17 silly audit   'foreground-child': [ '3.3.1' ],
+17 silly audit   'form-data': [ '4.0.5' ],
+17 silly audit   forwarded: [ '0.2.0' ],
+17 silly audit   fresh: [ '0.5.2' ],
+17 silly audit   'fs.realpath': [ '1.0.0' ],
+17 silly audit   fstream: [ '1.0.12' ],
+17 silly audit   'function-bind': [ '1.1.2' ],
+17 silly audit   'get-intrinsic': [ '1.3.0' ],
+17 silly audit   'get-proto': [ '1.0.1' ],
+17 silly audit   gopd: [ '1.2.0' ],
+17 silly audit   'graceful-fs': [ '4.2.11' ],
+17 silly audit   'has-symbols': [ '1.1.0' ],
+17 silly audit   'has-tostringtag': [ '1.0.2' ],
+17 silly audit   hasown: [ '2.0.2' ],
+17 silly audit   'http-errors': [ '2.0.1' ],
+17 silly audit   'iconv-lite': [ '0.4.24' ],
+17 silly audit   ieee754: [ '1.2.1' ],
+17 silly audit   inflight: [ '1.0.6' ],
+17 silly audit   inherits: [ '2.0.4' ],
+17 silly audit   ini: [ '4.1.3' ],
+17 silly audit   'ipaddr.js': [ '1.9.1' ],
+17 silly audit   'is-docker': [ '2.2.1' ],
+17 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+17 silly audit   'is-stream': [ '2.0.1' ],
+17 silly audit   'is-wsl': [ '2.2.0' ],
+17 silly audit   isarray: [ '1.0.0' ],
+17 silly audit   isexe: [ '2.0.0' ],
+17 silly audit   jackspeak: [ '3.4.3' ],
+17 silly audit   jsonfile: [ '6.2.0' ],
+17 silly audit   kleur: [ '4.1.5', '3.0.3' ],
+17 silly audit   lazystream: [ '1.0.1' ],
+17 silly audit   listenercount: [ '1.0.1' ],
+17 silly audit   lodash: [ '4.17.23' ],
+17 silly audit   'math-intrinsics': [ '1.1.0' ],
+17 silly audit   'media-typer': [ '0.3.0' ],
+17 silly audit   'merge-descriptors': [ '1.0.3' ],
+17 silly audit   methods: [ '1.1.2' ],
+17 silly audit   mime: [ '1.6.0' ],
+17 silly audit   'mime-db': [ '1.52.0' ],
+17 silly audit   'mime-types': [ '2.1.35' ],
+17 silly audit   minimist: [ '1.2.8' ],
+17 silly audit   minipass: [ '7.1.3' ],
+17 silly audit   minizlib: [ '3.1.0' ],
+17 silly audit   mkdirp: [ '0.5.6' ],
+17 silly audit   multer: [ '1.4.5-lts.2' ],
+17 silly audit   'native-run': [ '2.0.3' ],
+17 silly audit   negotiator: [ '0.6.3' ],
+17 silly audit   'normalize-path': [ '3.0.0' ],
+17 silly audit   oauth: [ '0.10.2' ],
+17 silly audit   'object-assign': [ '4.1.1' ],
+17 silly audit   'object-inspect': [ '1.13.4' ],
+17 silly audit   'on-finished': [ '2.4.1' ],
+17 silly audit   'on-headers': [ '1.1.0' ],
+17 silly audit   once: [ '1.4.0' ],
+17 silly audit   open: [ '8.4.2' ],
+17 silly audit   'package-json-from-dist': [ '1.0.1' ],
+17 silly audit   parseurl: [ '1.3.3' ],
+17 silly audit   passport: [ '0.7.0' ],
+17 silly audit   'passport-google-oauth20': [ '2.0.0' ],
+17 silly audit   'passport-local': [ '1.0.0' ],
+17 silly audit   'passport-oauth2': [ '1.8.0' ],
+17 silly audit   'passport-strategy': [ '1.0.0' ],
+17 silly audit   'path-expression-matcher': [ '1.1.3' ],
+17 silly audit   'path-is-absolute': [ '1.0.1' ],
+17 silly audit   'path-key': [ '3.1.1' ],
+17 silly audit   'path-to-regexp': [ '0.1.12' ],
+17 silly audit   pause: [ '0.0.1' ],
+17 silly audit   pend: [ '1.2.0' ],
+17 silly audit   plist: [ '3.1.0' ],
+17 silly audit   process: [ '0.11.10' ],
+17 silly audit   'process-nextick-args': [ '2.0.1' ],
+17 silly audit   prompts: [ '2.4.2' ],
+17 silly audit   'proxy-addr': [ '2.0.7' ],
+17 silly audit   qs: [ '6.14.2' ],
+17 silly audit   'random-bytes': [ '1.0.0' ],
+17 silly audit   'range-parser': [ '1.2.1' ],
+17 silly audit   'raw-body': [ '2.5.3' ],
+17 silly audit   'safe-buffer': [ '5.1.2', '5.2.1' ],
+17 silly audit   'readdir-glob': [ '1.1.3' ],
+17 silly audit   'safer-buffer': [ '2.1.2' ],
+17 silly audit   sax: [ '1.1.4' ],
+17 silly audit   semver: [ '7.7.4' ],
+17 silly audit   send: [ '0.19.2' ],
+17 silly audit   'serve-static': [ '1.16.3' ],
+17 silly audit   setimmediate: [ '1.0.5' ],
+17 silly audit   setprototypeof: [ '1.2.0' ],
+17 silly audit   'shebang-command': [ '2.0.0' ],
+17 silly audit   'shebang-regex': [ '3.0.0' ],
+17 silly audit   'side-channel': [ '1.1.0' ],
+17 silly audit   'side-channel-list': [ '1.0.0' ],
+17 silly audit   'side-channel-map': [ '1.0.1' ],
+17 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+17 silly audit   sisteransi: [ '1.0.5' ],
+17 silly audit   'slice-ansi': [ '4.0.0' ],
+17 silly audit   split2: [ '4.2.0' ],
+17 silly audit   statuses: [ '2.0.2' ],
+17 silly audit   streamsearch: [ '1.1.0' ],
+17 silly audit   streamx: [ '2.23.0' ],
+17 silly audit   stripe: [ '17.7.0' ],
+17 silly audit   strnum: [ '2.2.0' ],
+17 silly audit   tar: [ '7.5.11' ],
+17 silly audit   'tar-stream': [ '3.1.8' ],
+17 silly audit   teex: [ '1.0.1' ],
+17 silly audit   'text-decoder': [ '1.2.7' ],
+17 silly audit   through2: [ '4.0.2' ],
+17 silly audit   toidentifier: [ '1.0.1' ],
+17 silly audit   traverse: [ '0.3.9' ],
+17 silly audit   'tree-kill': [ '1.2.2' ],
+17 silly audit   tslib: [ '2.8.1' ],
+17 silly audit   'type-is': [ '1.6.18' ],
+17 silly audit   typedarray: [ '0.0.6' ],
+17 silly audit   'uid-safe': [ '2.1.5' ],
+17 silly audit   uid2: [ '0.0.4' ],
+17 silly audit   'undici-types': [ '7.18.2' ],
+17 silly audit   universalify: [ '2.0.1' ],
+17 silly audit   unpipe: [ '1.0.0' ],
+17 silly audit   untildify: [ '4.0.0' ],
+17 silly audit   unzipper: [ '0.10.14' ],
+17 silly audit   'util-deprecate': [ '1.0.2' ],
+17 silly audit   'utils-merge': [ '1.0.1' ],
+17 silly audit   vary: [ '1.1.2' ],
+17 silly audit   which: [ '2.0.2' ],
+17 silly audit   wrappy: [ '1.0.2' ],
+17 silly audit   xml2js: [ '0.6.2' ],
+17 silly audit   xmlbuilder: [ '11.0.1', '15.1.1' ],
+17 silly audit   xtend: [ '4.0.2' ],
+17 silly audit   yallist: [ '5.0.0' ],
+17 silly audit   yauzl: [ '2.10.0' ],
+17 silly audit   'zip-stream': [ '6.0.1' ]
+17 silly audit }
+18 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 611ms
+19 silly audit report {
+19 silly audit report   'fast-xml-parser': [
+19 silly audit report     {
+19 silly audit report       id: 1114772,
+19 silly audit report       url: 'https://github.com/advisories/GHSA-8gc5-j5rx-235r',
+19 silly audit report       title: 'fast-xml-parser affected by numeric entity expansion bypassing all entity expansion limits (incomplete fix for CVE-2026-26278)',
+19 silly audit report       severity: 'high',
+19 silly audit report       vulnerable_versions: '>=4.0.0-beta.3 <=5.5.5',
+19 silly audit report       cwe: [Array],
+19 silly audit report       cvss: [Object]
+19 silly audit report     }
+19 silly audit report   ]
+19 silly audit report }
+20 silly packumentCache corgi:https://registry.npmjs.org/fast-xml-parser cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/fast-xml-parser 74ms (cache revalidated)
+22 silly packumentCache corgi:https://registry.npmjs.org/fast-xml-parser set size:240555 disposed:false
+23 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fxml-builder cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fxml-builder 77ms (cache revalidated)
+25 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fxml-builder set size:135867 disposed:false
+26 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcore cache-miss
+27 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcore 72ms (cache revalidated)
+28 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcore set size:183445 disposed:false
+29 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fclient-s3 cache-miss
+30 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-env cache-miss
+31 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-http cache-miss
+32 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-ini cache-miss
+33 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-login cache-miss
+34 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-process cache-miss
+35 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-sso cache-miss
+36 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-web-identity cache-miss
+37 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fmiddleware-flexible-checksums cache-miss
+38 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fmiddleware-sdk-s3 cache-miss
+39 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fmiddleware-user-agent cache-miss
+40 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fnested-clients cache-miss
+41 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2ftoken-providers cache-miss
+42 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-env 147ms (cache revalidated)
+43 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-env set size:348479 disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-sso 187ms (cache revalidated)
+45 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-sso set size:616032 disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fclient-s3 219ms (cache revalidated)
+47 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fclient-s3 set size:2136403 disposed:false
+48 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-ini 231ms (cache revalidated)
+49 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-ini set size:786446 disposed:false
+50 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-login 239ms (cache revalidated)
+51 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-login set size:45820 disposed:false
+52 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-web-identity 238ms (cache revalidated)
+53 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-web-identity set size:333716 disposed:false
+54 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fmiddleware-sdk-s3 244ms (cache revalidated)
+55 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fmiddleware-sdk-s3 set size:440509 disposed:false
+56 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-http 259ms (cache revalidated)
+57 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-http set size:180490 disposed:false
+58 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fnested-clients 260ms (cache revalidated)
+59 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fnested-clients set size:287325 disposed:false
+60 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fmiddleware-flexible-checksums 270ms (cache revalidated)
+61 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fmiddleware-flexible-checksums set size:317769 disposed:false
+62 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2ftoken-providers 270ms (cache revalidated)
+63 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2ftoken-providers set size:449270 disposed:false
+64 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-process 433ms (cache revalidated)
+65 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-process set size:389350 disposed:false
+66 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fmiddleware-user-agent 447ms (cache revalidated)
+67 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fmiddleware-user-agent set size:383364 disposed:false
+68 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-node cache-miss
+69 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-node 77ms (cache revalidated)
+70 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcredential-provider-node set size:840844 disposed:false
+71 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fsignature-v4-multi-region cache-miss
+72 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fsignature-v4-multi-region 66ms (cache revalidated)
+73 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fsignature-v4-multi-region set size:309188 disposed:false
+74 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2futil-user-agent-node cache-miss
+75 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2futil-user-agent-node 67ms (cache revalidated)
+76 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2futil-user-agent-node set size:436339 disposed:false
+77 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fs3-request-presigner cache-miss
+78 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fs3-request-presigner 65ms (cache revalidated)
+79 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fs3-request-presigner set size:954490 disposed:false
+80 verbose cwd C:\Users\hs180\OneDrive\Desktop\Storage
+81 verbose os Windows_NT 10.0.26200
+82 verbose node v24.14.0
+83 verbose npm  v11.11.1
+84 verbose exit 0
+85 info ok

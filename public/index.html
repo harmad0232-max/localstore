@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4285f4">
+  <title>Local Storage App</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; }
+    header { padding: 12px 16px; background: #0f62fe; color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    main { padding: 16px; }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .path { margin: 8px 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { padding: 8px; border-bottom: 1px solid #eee; }
+    tr:hover { background: #f8f9fa; }
+    .btn { padding: 6px 10px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+    .btn.primary { background: #0f62fe; color: #fff; border-color: #0f62fe; }
+    .name { cursor: pointer; color: #0f62fe; }
+    .breadcrumbs a { color: #0f62fe; text-decoration: none; margin-right: 6px; }
+    .hidden { display: none; }
+    .card { border: 1px solid #eee; border-radius: 8px; padding: 12px; max-width: 520px; }
+    .input { padding: 8px; border: 1px solid #ccc; border-radius: 6px; min-width: 220px; }
+    .hint { color: #666; font-size: 13px; margin-top: 8px; }
+    .thumb { width: 48px; height: 48px; object-fit: contain; background: #f0f0f0; border-radius: 4px; vertical-align: middle; }
+    .thumb-wrap { width: 56px; text-align: center; }
+    .thumb-icon { width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: #e8e8e8; border-radius: 4px; font-size: 24px; }
+    .share-subset { margin-left: 12px; padding: 8px 12px; background: #e8f4fd; border: 1px solid #0f62fe; border-radius: 6px; }
+    .share-subset .btn { margin: 2px; }
+    .progress { width: 360px; max-width: 100%; height: 14px; }
+  </style>
+<script src="https://pay.google.com/gp/p/js/pay.js" async onload="onGooglePayLoaded()"></script>
+  </head>
+  <body>  <header>
+    <h3>Local Storage</h3>
+    <div class="row">
+      <img id="userAvatar" class="hidden" style="width:32px;height:32px;border-radius:50%;object-fit:cover;" alt="avatar"/>
+      <span id="userLabel"></span>
+      <button class="btn" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <main>
+    <div id="authPanel" class="card hidden">
+      <div class="row">
+        <input class="input" type="text" id="email" placeholder="Email"/>
+        <input class="input" type="password" id="password" placeholder="Password"/>
+        <input class="input" type="text" id="name" placeholder="Name (optional)"/>
+      </div>
+      <div class="row" style="margin-top: 10px;">
+        <button class="btn primary" id="loginBtn">Login</button>
+        <button class="btn" id="registerBtn">Register</button>
+        <a class="btn" href="/auth/google" id="googleBtn" style="text-decoration:none; display:inline-block;">Login with Google</a>
+      </div>
+      <div class="hint" id="authMsg"></div>
+    </div>
+
+    <div id="appPanel" class="hidden">
+      <div class="row">
+        <div class="row">
+          <button class="btn primary" id="tabMy">My Storage</button>
+          <button class="btn" id="tabJobs">Backup Jobs</button>
+        </div>
+        <span id="storageModeLabel"></span>
+        <input type="text" id="folderName" class="input" placeholder="New folder name" style="width:150px;" />
+        <button class="btn" id="mkdir">New Folder</button>
+      </div>
+      <div class="row" style="margin-top:6px;">
+        <button class="btn" id="deviceBackupBtn">Device Backup</button>
+        <button class="btn" id="downloadCloudBackupBtn">Download Cloud Backup</button>
+        <input type="file" id="restoreFile" class="hidden" />
+        <input type="file" id="deviceBackupDirInput" class="hidden" multiple webkitdirectory />
+        <input type="file" id="deviceBackupFilesInput" class="hidden" multiple />
+        <span id="backupStatus" class="hint"></span>
+      </div>
+      <div class="row hidden share-subset" id="cloudBackupPicker">
+        <div style="width:100%;">
+          <div style="margin-bottom:6px; font-weight:600;">Cloud backup folders</div>
+          <div class="hint" id="cloudBackupHint" style="margin-top:0;"></div>
+          <div id="cloudBackupList" style="max-height:180px; overflow:auto; border:1px solid #eee; border-radius:6px; padding:8px; background:#fff;"></div>
+          <div class="row" style="margin-top:8px;">
+            <button class="btn primary" id="cloudBackupDownloadBtn">Download</button>
+            <button class="btn" id="cloudBackupCancelBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="row hidden share-subset" id="restorePicker">
+        <div style="width:100%;">
+          <div style="margin-bottom:6px; font-weight:600;">Restore items</div>
+          <div class="hint" id="restorePickerHint" style="margin-top:0;"></div>
+          <div id="restoreItems" style="max-height:180px; overflow:auto; border:1px solid #eee; border-radius:6px; padding:8px; background:#fff;"></div>
+          <div class="row" style="margin-top:8px;">
+            <button class="btn" id="restoreSelectAllBtn">Select all</button>
+            <button class="btn" id="restoreSelectNoneBtn">Select none</button>
+            <button class="btn primary" id="restoreSelectedBtn">Restore selected</button>
+            <button class="btn" id="restoreCancelBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="row hidden share-subset" id="deviceBackupPanel">
+        <button class="btn" id="deviceBackupBrowseBtn">Browse</button>
+        <button class="btn" id="systemDriveBackupBtn" style="background-color: #673ab7; color: white;">System Drive Backup</button>
+        <select class="input" id="deviceBackupBrowseMode">
+          <option value="files" selected>Files</option>
+          <option value="folder">Folder / Drive</option>
+        </select>
+        <button class="btn primary" id="deviceBackupStartBtn">Start backup</button>
+        <button class="btn" id="deviceBackupClearBtn">Clear</button>
+      </div>
+      <div class="row hidden" id="backupProgressRow" style="margin-top:6px;">
+        <progress id="backupProgress" class="progress"></progress>
+        <span id="backupProgressLabel" class="hint"></span>
+      </div>
+      <div id="activeJobsList" style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px;"></div>
+      
+      <div id="jobsPanel" class="hidden">
+        <div class="card" style="max-width: 100%; margin-top: 10px;">
+          <div style="font-weight: 600; margin-bottom: 10px;">Backup Jobs History</div>
+          <div id="persistedJobsList" style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="hint">No backup jobs yet.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="storageBrowser">
+        <div class="path">
+          <span class="breadcrumbs" id="breadcrumbs"></span>
+        </div>
+        <table>
+          <thead>
+          <tr><th class="thumb-wrap">Thumbnail</th><th><input type="checkbox" id="selectAll"/></th><th>Name</th><th>Type</th><th>Size</th><th>Modified</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="list"></tbody>
+        </table>
+      </div>
+      <div class="row" style="margin-top:8px; gap:4px; align-items:flex-start;">
+        <button class="btn" id="bulkDeleteBtn">Delete selected</button>
+        <button class="btn primary" id="bulkShareBtn">Share selected</button>
+        <div id="bulkShareOptions" class="hidden share-subset">
+          <div style="margin-bottom:4px; font-weight:600;">Sharing options:</div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <button class="btn" id="bulkShareToUserBtn">👤 Share to user</button>
+            <button class="btn" id="bulkCopyLinksBtn">🔗 Copy links</button>
+            <button class="btn" id="bulkEmailBtn">✉️ Email</button>
+            <button class="btn" id="bulkWhatsAppBtn">🟢 WhatsApp</button>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button class="btn" id="adminBtn">Admin panel</button>
+        <button class="btn" id="plansBtn">Plans</button>
+      </div>
+      <div id="gPayButton" class="hidden" style="margin-top: 10px; display: flex; justify-content: center;"></div>
+      <div class="row hidden share-subset" id="plansPanel">
+        <div style="width:100%;">
+          <div style="margin-bottom:6px; font-weight:600;">Plans</div>
+          <div class="hint" id="plansStatus" style="margin-top:0;"></div>
+          <div id="plansList" style="border:1px solid #eee; border-radius:6px; padding:8px; background:#fff;"></div>
+          <div class="row" style="margin-top:8px;">
+            <button class="btn" id="plansCloseBtn">Close</button>
+          </div>
+        </div>
+      </div>
+      <div class="row hidden share-subset" id="adminPanel">
+        <div style="width:100%;">
+          <div style="margin-bottom:6px; font-weight:600;">Admin panel</div>
+          <div class="row" style="margin-bottom:6px;">
+            <input class="input" type="password" id="adminToken" placeholder="Admin token"/>
+            <button class="btn" id="adminLoadUsersBtn">Load users</button>
+            <input class="input" type="text" id="adminUserSearch" placeholder="Search user"/>
+            <button class="btn" id="adminSearchBtn">Search</button>
+            <span class="hint" id="adminStatus" style="margin-top:0;"></span>
+          </div>
+          <div id="adminUsers" style="max-height:220px; overflow:auto; border:1px solid #eee; border-radius:6px; padding:8px; background:#fff;"></div>
+          <div class="row" style="margin-top:8px;">
+            <select class="input" id="adminUserSelect"></select>
+            <input class="input" type="number" id="adminQuotaGb" placeholder="Quota (GB)" min="1" step="1"/>
+            <button class="btn primary" id="adminSetQuotaBtn">Set quota</button>
+            <button class="btn" id="adminCloseBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "appId": "com.storageapp.app",
+  "appName": "Local Storage App",
+  "webDir": "public",
+  "server": {
+    "url": "http://192.168.1.37:3000",
+    "cleartext": true
+  }
+}
